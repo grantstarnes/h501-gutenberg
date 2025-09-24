@@ -1,8 +1,8 @@
 import pandas as pd
 
-authors = "https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-06-03/gutenberg_authors.csv"
-languages = "https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-06-03/gutenberg_languages.csv"
-metadata = "https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-06-03/gutenberg_metadata.csv"
+from tt_gutenberg.data_sources import get_urls
+
+authors, languages, metadata = get_urls()
 
 def list_authors(by_languages=True, alias=True):
     # Load data
